@@ -7,7 +7,7 @@ bundle install
 rails s
 ```
 
-Type url in the browser with *localhost:3000/admin*, and you will see the result.
+Type url in the browser with **localhost:3000/admin**, and you will see the result.
 
 Please feel free to contact me.
 
