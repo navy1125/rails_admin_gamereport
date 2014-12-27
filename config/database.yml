@@ -1,25 +1,75 @@
 # SQLite version 3.x
 #   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
-default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
-
 development:
-  <<: *default
-  database: db/development.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  database: gamereport
+  pool: 5
+  username: root
+#password: db999
+#  host: localhost
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: db/test.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  database: gamereport_test
+  pool: 5
+  username: root
+#password: db999
+#  host: localhost
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  database: gamereport
+  pool: 5
+  username: root
+#password: db999
+#  host: localhost
+
+# database_a: 
+# adapter: mysql2 
+# host: x.x.x.x 
+# username: xxx 
+# password: xxx 
+# database: xxx 
+#
+# database_b: 
+# adapter: mysql2 
+# host: x.x.x.x 
+# username: xxx 
+# password: xxx 
+# database: xxx 
+
+brave_brigage:
+  adapter: mysql2
+  encoding: utf8
+  database: gamereport_bb
+  pool: 5
+  username: root
+  timeout: 500000
+
+soul_guardian:
+  adapter: mysql2
+  encoding: utf8
+  database: gamereport_sg
+  pool: 5
+  username: root
+
+captain_hero:
+  adapter: mysql2
+  encoding: utf8
+  database: gamereport_ch
+  pool: 5
+  username: root
+
+pocket_knight:
+  adapter: mysql2
+  encoding: utf8
+  database: gamereport_pk
+  pool: 5
+  username: root
+

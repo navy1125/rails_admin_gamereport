@@ -1,4 +1,4 @@
-require 'rails_admin/demo'
+#require 'rails_admin/demo'
 
 RailsAdmin.config do |config|
 
@@ -28,12 +28,71 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
-    demo do
-        only User
-    end
+    #demo do
+    #    only User
+    #end
 
     ## With an audit adapter, you can add:
     # history_index
     # history_show
+  end
+  config.model User do
+    visible false
+  end
+
+  config.model BraveBrigage::UserStar do
+    exclude_fields :id,:created_at,:updated_at
+  end
+  config.model BraveBrigage::UserLogin do
+    exclude_fields :id,:created_at,:updated_at
+    export do
+      field :number_of_lanes
+    end
+  
+  end
+  config.model BraveBrigage::UserSummary do
+    exclude_fields :id,:created_at,:updated_at
+  end
+  config.model BraveBrigage::UserTrack do
+    exclude_fields :id,:created_at,:updated_at
+  end
+
+  config.model SoulGuardian::UserStar do
+    exclude_fields :id,:created_at,:updated_at
+  end
+  config.model SoulGuardian::UserLogin do
+    exclude_fields :id,:created_at,:updated_at
+  end
+  config.model SoulGuardian::UserSummary do
+    exclude_fields :id,:created_at,:updated_at
+  end
+  config.model SoulGuardian::UserTrack do
+    exclude_fields :id,:created_at,:updated_at
+  end
+
+  config.model PocketKnight::UserStar do
+    exclude_fields :id,:created_at,:updated_at
+  end
+  config.model PocketKnight::UserLogin do
+    exclude_fields :id,:created_at,:updated_at
+  end
+  config.model PocketKnight::UserSummary do
+    exclude_fields :id,:created_at,:updated_at
+  end
+  config.model PocketKnight::UserTrack do
+    exclude_fields :id,:created_at,:updated_at
+  end
+
+  config.model CaptainHero::UserStar do
+    exclude_fields :id,:created_at,:updated_at
+  end
+  config.model CaptainHero::UserLogin do
+    exclude_fields :id,:created_at,:updated_at
+  end
+  config.model CaptainHero::UserSummary do
+    exclude_fields :id,:created_at,:updated_at
+  end
+  config.model CaptainHero::UserTrack do
+    exclude_fields :id,:created_at,:updated_at
   end
 end

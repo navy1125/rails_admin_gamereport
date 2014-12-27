@@ -1,11 +1,19 @@
-source 'https://ruby.taobao.org'
+source 'http://rubygems.org'
 
-gem 'rails_admin'
+gem 'unicorn'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'cancan'
+gem 'devise', '~> 1.4'
+
+gem 'paperclip', '~> 2.4'
+gem 'mlb', '~> 0.5'
+gem 'dragonfly'
+gem 'mini_magick'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'mysql2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -39,3 +47,4 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'rails_admin_charts'

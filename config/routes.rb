@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :users
+  #root to:  "rails_admin::Main#dashboard"
+
+  # https://github.com/sferik/rails_admin/issues/362
+  #match ':controller(/:action(/:id(.:format)))'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
