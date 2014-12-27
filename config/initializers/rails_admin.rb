@@ -2,6 +2,7 @@
 
 RailsAdmin.config do |config|
 
+  config.main_app_name = ['ZqgameReport', 'Navy']
   ### Popular gems integration
 
   ## == Devise ==
@@ -28,6 +29,7 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
+    charts
     #demo do
     #    only User
     #end
